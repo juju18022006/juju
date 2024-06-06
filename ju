@@ -1,0 +1,21 @@
+deixe tela = document.getElementById('c2');
+deixe renderizador = novo c2.Renderer(canvas);
+
+renderizador .size(480, 480);
+ renderizador .background('#cccccc');
+
+deixe rect = new c2.Rect(0, 0, 480, 480);
+deixe rects = rect.split([1,2,3,5,8], 'quarificar');
+
+renderizador .draw(() => {
+   renderizador .clear();
+  
+  deixe mouse = renderizador .mouse;
+  deixe ponto = novo c2.Point(mouse.x, mouse.y);
+  for (deixe reto de retos){
+    if(rect.contains(point)) renderizador .fill('#ff0000');
+    senão renderizador .fill(false);
+     renderizador .rect(rect);
+  }
+});
+      
